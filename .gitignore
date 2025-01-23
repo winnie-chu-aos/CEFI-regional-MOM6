@@ -5,3 +5,7 @@ html
 
 # Ignore pycache
 **__pycache__
+
+# Ignore datasets 
+
+*.nc

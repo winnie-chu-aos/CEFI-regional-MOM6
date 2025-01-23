@@ -1,0 +1,410 @@
+ Entering coupler_init at 20250104 193804.005
+ Starting initializing ensemble_manager at 20250104 193804.007
+ Finished initializing ensemble_manager at 20250104 193804.007
+ Starting to initialize diag_manager at 20250104 193804.008
+ Finished initializing diag_manager at 20250104 193804.170
+ Starting to initialize tracer_manager at 20250104 193804.170
+ Finished initializing tracer_manager at 20250104 193804.269
+ Beginning to initialize component models at 20250104 193804.269
+ Starting to initialize atmospheric model at 20250104 193804.269
+ Finished initializing atmospheric model at 20250104 193804.277
+ Starting to initialize land model at 20250104 193804.281
+ Finished initializing land model at 20250104 193804.287
+ Starting to initialize ice model at 20250104 193804.289
+
+WARNING: Open_file is appending .nc to the filename ./sea_ice_geometry
+
+ Finished initializing ice model at 20250104 193804.364
+ Starting to initialize ocean model at 20250104 193804.366
+
+WARNING: MOM_obsolete_params: ETA_TOLERANCE_AUX is an obsolete run-time flag.
+
+
+WARNING: MOM_file_parser : THICKNESSDIFFUSE over-ridden.  Line: 'THICKNESSDIFFUSE = False' in file MOM_override.
+
+
+WARNING: MOM_file_parser : REGRIDDING_COORDINATE_MODE over-ridden.  Line: 'REGRIDDING_COORDINATE_MODE = "Z*"' in file MOM_override.
+
+
+WARNING: MOM_file_parser : ALE_COORDINATE_CONFIG over-ridden.  Line: 'ALE_COORDINATE_CONFIG = "FNC1:2,6500,6,.01"' in file MOM_override.
+
+
+WARNING: MOM_file_parser : INIT_LAYERS_FROM_Z_FILE over-ridden.  Line: 'INIT_LAYERS_FROM_Z_FILE = False' in file MOM_override.
+
+
+WARNING: read_field_3d:The variable Temp has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable Salt has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: MOM_file_parser : LAPLACIAN over-ridden.  Line: 'LAPLACIAN = False' in file MOM_override.
+
+
+WARNING: MOM_file_parser : SMAGORINSKY_AH over-ridden.  Line: 'SMAGORINSKY_AH = False' in file MOM_override.
+
+
+WARNING: MOM_file_parser : KD over-ridden.  Line: 'KD = 5.e-4' in file MOM_override.
+
+
+WARNING: MOM_file_parser : HENYEY_IGW_BACKGROUND over-ridden.  Line: 'HENYEY_IGW_BACKGROUND = False' in file MOM_override.
+
+
+WARNING: set_diffusivity_init: SIMPLE_TKE_TO_KD can not be used reliably with USE_REGRIDDING.
+
+
+WARNING: MOM_file_parser : VAR_PEN_SW over-ridden.  Line: 'VAR_PEN_SW = True' in file MOM_override.
+
+
+WARNING: Use EPBL_LANGMUIR_SCHEME = ADDITIVE instead of the archaic LT_ENHANCE = 3.
+
+
+WARNING: MOM_file_parser : PEN_SW_NBANDS over-ridden.  Line: 'PEN_SW_NBANDS = 3' in file MOM_override.
+
+
+WARNING: read_field_3d:The variable nh3 has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable mu_mem_nsm has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable mu_mem_nmd has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable mu_mem_nlg has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable mu_mem_ndi has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable irr_aclm_z has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable irr_aclm_sfc has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable irr_aclm has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable htotal has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable silg_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable simd_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable pdi_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable plg_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable pmd_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable psm_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable fedi_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable felg_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable femd_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable fesm_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable ndi_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nlg_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nmd_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nsm_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable fedet_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable sidet_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable pdet_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable ndet_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable lithdet_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable cadet_calc_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable cadet_arag_btf has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable co3_ion has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable chl has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable cased has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nlgz has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nmdz has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nsmz has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable sio4 has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable simd has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable silg has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable sidet has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable sldop has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable sldon has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable srdop has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable srdon has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable po4 has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable pdet has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable o2 has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable no3 has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nh4 has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nsm has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nmd has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nlg has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable ndi has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable ndet has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable nbact has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable lithdet has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable lith has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable ldop has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable ldon has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable psm has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable pmd has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable plg has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable pdi has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable fesm has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable femd has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable felg has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable fedi has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable fedet has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable fed has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable dic has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable cadet_calc has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable cadet_arag has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: read_field_3d:The variable alk has an unlimited dimension in INPUT/MOM_IC.nc but no time level is specified.
+
+
+WARNING: Unused line in MOM_input : COORD_FILE = "layer_coord.nc"
+
+
+WARNING: Unused line in MOM_input : BOUNDARY_EXTRAPOLATION = True
+
+
+WARNING: Unused line in MOM_input : REGRID_COMPRESSIBILITY_FRACTION = 0.01
+
+
+WARNING: Unused line in MOM_input : MAXIMUM_INT_DEPTH_CONFIG = "FNC1:5,8000.0,1.0,.01"
+
+
+WARNING: Unused line in MOM_input : MAX_LAYER_THICKNESS_CONFIG = "FNC1:400,31000.0,0.1,.01"
+
+
+WARNING: Unused line in MOM_input : TEMP_SALT_Z_INIT_FILE = ""
+
+
+WARNING: Unused line in MOM_input : TEMP_Z_INIT_FILE = "woa13_decav_ptemp_monthly_fulldepth_01.nc"
+
+
+WARNING: Unused line in MOM_input : SALT_Z_INIT_FILE = "woa13_decav_s_monthly_fulldepth_01.nc"
+
+
+WARNING: Unused line in MOM_input : Z_INIT_FILE_PTEMP_VAR = "ptemp_an"
+
+
+WARNING: Unused line in MOM_input : Z_INIT_FILE_SALT_VAR = "s_an"
+
+
+WARNING: Unused line in MOM_input : Z_INIT_ALE_REMAPPING = True
+
+
+WARNING: Unused line in MOM_input : N2_FLOOR_IOMEGA2 = 0.0
+
+
+WARNING: Unused line in MOM_input : ORIG_MLD_ITERATION = False
+
+
+WARNING: Unused line in MOM_input : EPBL_USTAR_MIN = 1.45842E-18
+
+
+WARNING: Unused line in MOM_input : CHL_FILE = "seawifs-clim-1997-2010.1440x1080.v20180328.nc"
+
+
+WARNING: Unused line in MOM_input : CHL_VARNAME = "chlor_a"
+
+
+WARNING: Unused line in MOM_layout : #override OCEAN_OMP_THREADS = 1
+
+
+WARNING: Unused line in MOM_override : #override Z_INIT_REMAPPING_SCHEME = "PPM_IH4"
+
+
+WARNING: Unused line in MOM_override : #override Z_INIT_REMAP_OLD_ALG = True
+
+
+WARNING: Unused line in MOM_override : #override Z_INIT_HOMOGENIZE = True
+
+ Finished initializing ocean model at 20250104 193812.100
+ Starting to initialize data_override at 20250104 193812.100
+ Finished initializing data_override at 20250104 193812.101
+ Finished initializing component models at 20250104 193812.101
+ Starting to initialize flux_exchange at 20250104 193812.101
+ Finsihed initializing flux_exchange at 20250104 193812.165
+ Exiting coupler_init at 20250104 193812.166
+
+WARNING: diag_util_mod::opening_file: module/field_name (generic_cobalt/mld03) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (generic_cobalt/dp_fac) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (generic_cobalt/wc_vert_int_net_phyto_resp) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (generic_cobalt_z/irr_mem_sfc) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (generic_cobalt_z/irr_acclim) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (generic_cobalt_z/irr_mem) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/hfsifrazil) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/MLD_restrat) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/udml_restrat) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/vdml_restrat) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/uml_restrat) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/vml_restrat) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model_z/uhml) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model_z/vhml) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/hfsifrazil) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model/difmxylo) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model_z/uhml) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model_z/vhml) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model_z/dispkexyfo) NOT registered
+
+
+WARNING: diag_util_mod::opening_file: module/field_name (ocean_model_z/Kd_itides) NOT registered
+
+                               Memuse(MB) at Memory HiWaterMark=  4.556E+02  4.556E+02  0.000E+00  4.556E+02

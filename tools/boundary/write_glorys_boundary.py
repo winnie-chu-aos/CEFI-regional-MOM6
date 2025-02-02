@@ -25,7 +25,7 @@ def load_config(config_file):
         config = yaml.safe_load(file)
     return config
 
-def write_year(year, glorys_dir, segments, variables, is_first_year=False, is_last_year=False):
+def write_year(year, glorys_dir, segments, variables, is_first_year=True, is_last_year=False):
     glorys = (
         xarray.open_mfdataset(path.join(glorys_dir, f'GLORYS_REANALYSIS_{year}-*.nc'))
         .rename({'latitude': 'lat', 'longitude': 'lon', 'depth': 'z'})

@@ -24,10 +24,10 @@
 /
 
  &coupler_nml
-        months = 0
+        months = 1
         days   = 0
         current_date = 1993,1,1,0,0,0
-        hours = 48
+        hours = 0
         minutes = 0
         seconds = 0
         calendar = 'gregorian'

@@ -105,7 +105,8 @@ def write_runoff(glofas, glofas_mask, hgrid, coast_mask, out_file):
         method='conservative',
         periodic=True,
         reuse_weights=True,
-        filename=os.path.join(os.environ['TMPDIR'], 'glofas_to_mom.nc')
+        filename = '/scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/tools/rivers/glofas_to_mom.nc'
+        #filename=os.path.join(os.environ['TMPDIR'], 'glofas_to_mom.nc')
     )
     # Interpolate only from GloFAS points that are river end points.
     glofas_regridded = glofas_to_mom_con(glofas_kg.where(glofas_mask > 0).fillna(0.0))
@@ -157,7 +158,8 @@ def write_runoff(glofas, glofas_mask, hgrid, coast_mask, out_file):
         method='nearest_s2d',
         locstream_in=True,
         reuse_weights=True,
-        filename=os.path.join(os.environ['TMPDIR'], 'coast_to_mom.nc')
+        filename='/scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/tools/rivers/coast_to_mom.nc'
+        #filename=os.path.join(os.environ['TMPDIR'], 'coast_to_mom.nc')
     )
     coast_id = mom_id[flat_mask]
     nearest_coast = coast_to_mom(coast_id)

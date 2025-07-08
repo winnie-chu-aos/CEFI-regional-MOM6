@@ -2,8 +2,8 @@ CEFI_NWA12_COBALT_V1
 1993 1 1 0 0 0
 
 # MOM6 ocean diagnostics files
-"ocean_daily%4yr%2mo",            1, "days",   1, "days", "time", 1, "months"
-"ocean_month%4yr",            1, "months", 1, "days", "time", 12, "months"
+#"ocean_daily%4yr%2mo",            1, "days",   1, "days", "time", 1, "months"
+#"ocean_month%4yr",            1, "months", 1, "days", "time", 12, "months"
 #"ocean_month_z%4yr",          1, "months", 1, "days", "time", 12, "months"
 #"ocean_annual",          12, "months", 1, "days", "time"
 #"ocean_annual_z",        12, "months", 1, "days", "time"
@@ -11,37 +11,102 @@ CEFI_NWA12_COBALT_V1
 
 # newly added budget terms
 "ocean_daily_budgets%4yr%2mo",    24, "hours", 1, "days", "time", 1, "months"
+"dye_experiments_z%4yr%2mo",    24, "hours", 1, "days", "time", 1, "months"
 
 # -----------------------------------------------------------------------------------------
 # OCEAN_COBALT_DAILY_BUDGETS: Heat (enthalpy) and oxygen budgets for daily resolution
 # -----------------------------------------------------------------------------------------
 
-
 # HEAT BUDGET: tracer concentration time tendencies due to various processes
- "ocean_model",  "temp",          "temp",                                             "ocean_daily_budgets%4yr%2mo",         "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2 # potential temperature
- "ocean_model",  "volcello",                        "volcello",                         "ocean_daily_budgets%4yr%2mo","all","mean","-98.0  -50.0   5.2  31.0  -1  -1",2 # Cell measure for 3d data
- "ocean_model", "Th_tendency",                       "Th_tendency",                       "ocean_daily_budgets%4yr%2mo","all","mean","-98.0  -50.0   5.2  31.0  -1  -1",2 # net tendencies and lateral advection tendencies for heat
- "ocean_model", "T_advection_xy",                "T_advection_xy",                "ocean_daily_budgets%4yr%2mo","all","mean","-98.0  -50.0   5.2  31.0  -1  -1",2 # net tendencies and lateral advection tendencies for heat
- "ocean_model", "Th_tendency_vert_remap",            "T_tendency_vert_remap",            "ocean_daily_budgets%4yr%2mo","all","mean","-98.0  -50.0   5.2  31.0  -1  -1",2 # tendencies from vertical remapping for heat
- "ocean_model", "boundary_forcing_heat_tendency","boundary_forcing_heat_tendency","ocean_daily_budgets%4yr%2mo","all","mean","-98.0  -50.0   5.2  31.0  -1  -1",2 # tendencies from boundary terms which have a 3d contribution
- "ocean_model", "diabatic_heat_tendency"   ,       "diabatic_heat_tendency",          "ocean_daily_budgets%4yr%2mo","all","mean","-98.0  -50.0   5.2  31.0  -1  -1",2 # across layer diffusion tendencies for heat
-# "ocean_model", "frazil_heat_tendency"   ,       "frazil_heat_tendency",          "ocean_daily_budgets%4yr%2mo","all","mean","-98.0  -50.0   5.2  31.0  -1  -1",2 # tendencies from frazil ice which have a 3d contribution
+ "ocean_model",  "temp",                            "temp",                             "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # potential temperature
+ "ocean_model",  "Th_tendency",                     "Th_tendency",                      "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # net tendencies and lateral advection tendencies for heat
+ "ocean_model",  "T_advection_xy",                  "T_advection_xy",                   "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # net tendencies and lateral advection tendencies for heat
+ "ocean_model",  "Th_tendency_vert_remap",          "T_tendency_vert_remap",            "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # tendencies from vertical remapping for heat
+ "ocean_model",  "boundary_forcing_heat_tendency",  "boundary_forcing_heat_tendency",   "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # tendencies from boundary terms which have a 3d contribution
+ "ocean_model",  "diabatic_heat_tendency"   ,       "diabatic_heat_tendency",           "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # across layer diffusion tendencies for heat
+# "ocean_model", "frazil_heat_tendency"   ,         "frazil_heat_tendency",             "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # tendencies from frazil ice which have a 3d contribution
  
-# OXYGEN BUDGET
-"ocean_model",     "o2",                        "o2",                        "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "-98.0  -50.0   5.2  31.0  -1  -1", 2
-"ocean_model",     "o2",                        "o2min",                        "ocean_daily_budgets%4yr%2mo",  "all",  "min", "-98.0  -50.0   5.2  31.0  -1  -1", 2
-"ocean_model",     "o2",                        "o2max",                        "ocean_daily_budgets%4yr%2mo",  "all",  "max", "-98.0  -50.0   5.2  31.0  -1  -1", 2
+# OXYGEN BUDGET (CONTENT)
+ "ocean_model",     "o2",                        "o2",                        "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model",     "o2",                        "o2min",                     "ocean_daily_budgets%4yr%2mo",  "all",  "min", "none", 2
+ "ocean_model",     "o2h_tendency",              "o2h_tendency",              "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model",     "o2_advection_xy",           "o2_advection_xy",           "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model",     "o2_diffusion_xy",           "o2_diffusion_xy",           "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model",     "o2h_tendency_vert_remap",   "o2h_tendency_vert_remap",   "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "generic_cobalt",  "o2_vdiffuse_impl",          "o2_vdiffuse_impl",          "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "generic_cobalt",  "jo2",                       "jo2",                       "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+# new stuff just to try
+ "generic_cobalt",  "jo2_plus_btm",              "jo2_plus_btm",              "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model",     "o2_post_horzn",             "o2_post_horzn",             "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "generic_cobalt",  "wc_vert_int_jo2resp",       "wc_vert_int_jo2resp",       "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
+ "generic_cobalt",  "jo2resp_wc",                "jo2resp_wc",                "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "none", 2
 
-# OXYGEN CONTENT
- "ocean_model",     "o2h_tendency",              "o2h_tendency",              "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "-98.0  -50.0   5.2  31.0  -1  -1", 2
- "ocean_model",     "o2_advection_xy",           "o2_advection_xy",           "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "-98.0  -50.0   5.2  31.0  -1  -1", 2
- "ocean_model",     "o2_diffusion_xy",           "o2_diffusion_xy",           "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "-98.0  -50.0   5.2  31.0  -1  -1", 2
- "ocean_model",     "o2h_tendency_vert_remap",   "o2h_tendency_vert_remap",   "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "-98.0  -50.0   5.2  31.0  -1  -1", 2
- "generic_cobalt",  "o2_vdiffuse_impl",          "o2_vdiffuse_impl",          "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "-98.0  -50.0   5.2  31.0  -1  -1", 2
- "generic_cobalt",  "jo2",                       "jo2",                       "ocean_daily_budgets%4yr%2mo",  "all",  "mean", "-98.0  -50.0   5.2  31.0  -1  -1", 2
+# MISCELLANEOUS 3D
+ "ocean_model",  "volcello",                 "volcello",                "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "MLD_003",                  "MLD_003",                 "ocean_daily_budgets%4yr%2mo",  "all", "mean", "none",2
+ "ocean_model",  "e",                        "e",                       "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "h",                        "h",                       "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "Rho_cv",                   "Rho_cv",                  "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "salt",                     "salt",                    "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "u",                        "u",                       "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "v",                        "v",                       "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "po4",                      "po4",                     "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "no3",                      "no3",                     "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "ocean_model",  "RV",                       "RV",                      "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "ocean_model",  "PV",                       "PV",                      "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ 
 
- "ocean_model", "MLD_003",      "MLD_003",          "ocean_daily_budgets%4yr%2mo",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
+# MISCELLANEOUS 2D
+# "ocean_model",  "bbl_thick_u",              "bbl_thick_u",             "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "ocean_model",  "bbl_thick_v",              "bbl_thick_v",             "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "ocean_model",  "subML_N2",                 "subML_N2",                "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "generic_cobalt", "fno3denit_sed",          "fno3denit_sed",           "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "generic_cobalt", "fnoxic_sed",             "fnoxic_sed",              "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "ocean_model",  "Rd1",                      "Rd1",                     "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "generic_cobalt","o2_trunoff",              "o2_trunoff",              "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "generic_cobalt","wc_vert_int_npp"          "wc_vert_int_npp"          "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
 
+# DIFFUSIVITIES
+ "ocean_model",  "Kd_interface",             "Kd_interface",            "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "Kd_bkgnd",                 "Kd_bkgnd",                "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "Kd_ePBL",                  "Kd_ePBL",                 "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "ocean_model",  "Kd_BBL",                   "Kd_BBL",                  "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "Kd_shear",                 "Kd_shear",                "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model",  "Kd_layer",                 "Kd_layer",                "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "ocean_model",  "KHTR_h",                   "KHTR_h",                  "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+# "ocean_model",  "KHTR_u",                   "KHTR_u",                  "ocean_daily_budgets%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+
+# -----------------------------------------------------------------------------------------
+# OCEAN_DAILY_z: Extra diagnostic terms at daily resolution
+# -----------------------------------------------------------------------------------------
+
+# BOUNDARY IMPULSE TRACER 
+ "ocean_model_z",     "boundary_impulse",   "boundary_impulse",      "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+
+# REGIONAL DYE
+ "ocean_model_z",     "dye001",              "dye50m",               "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model_z",     "dye002",              "dye100m",              "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model_z",     "dye003",              "dye200m",              "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model_z",     "dye004",              "dye400m",              "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model_z",     "dye005",              "dye800m",              "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model_z",     "dye006",              "dye1600m",             "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model_z",     "dye007",              "dye3200m",             "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+ 
+# MISCELLANEOUS 3D
+ "ocean_model_z",  "volcello",                 "volcello",                "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "temp",                     "temp",                    "dye_experiments_z%4yr%2mo","all","mean","none",2
+ "ocean_model_z",  "o2",                       "o2",                      "dye_experiments_z%4yr%2mo",  "all",  "mean", "none", 2
+ "ocean_model_z",  "e",                        "e",                       "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "h",                        "h",                       "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "Rho_cv",                   "Rho_cv",                  "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "salt",                     "salt",                    "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "u",                        "u",                       "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "v",                        "v",                       "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "umo",                      "umo",                     "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "vmo",                      "vmo",                     "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "uhml",                     "uhml",                    "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "ocean_model_z",  "vhml",                     "vhml",                    "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
+ "generic_cobalt_z","chl",                     "chl",                     "dye_experiments_z%4yr%2mo","all","mean","none",2 # Cell measure for 3d data
 
 # -----------------------------------------------------------------------------------------
 # OCEAN_STATIC: Default static diagnostics (in native coords)
@@ -75,51 +140,46 @@ CEFI_NWA12_COBALT_V1
 # -----------------------------------------------------------------------------------------
 # OCEAN_DAILY: Daily scalar and vector components
 # -----------------------------------------------------------------------------------------
- "ocean_model_z",   "volcello",     "volcello",         "ocean_daily%4yr%2mo",        "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2 # Cell measure for 3d data
- "ocean_model_z",   "temp",          "temp",              "ocean_daily%4yr%2mo",         "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "generic_cobalt","wc_vert_int_npp","wc_vert_int_npp",  "ocean_daily%4yr%2mo",         "all", "mean" , "-98.0  -50.0   5.2  31.0  -1  -1",2
- "generic_cobalt","wc_vert_int_juptake_nh4","wc_vert_int_juptake_nh4",  "ocean_daily%4yr%2mo",         "all", "mean" , "-98.0  -50.0   5.2  31.0  -1  -1",2
- "generic_cobalt","wc_vert_int_juptake_no3","wc_vert_int_juptake_no3",  "ocean_daily%4yr%2mo",         "all", "mean" , "-98.0  -50.0   5.2  31.0  -1  -1",2
+# "ocean_model",   "volcello",     "volcello",         "ocean_daily%4yr%2mo",        "all", "mean", "none",2 # Cell measure for 3d data
+# "ocean_model",   "temp",          "temp",              "ocean_daily%4yr%2mo",         "all", "mean", "none",2
+# "generic_cobalt","wc_vert_int_npp","wc_vert_int_npp",  "ocean_daily%4yr%2mo",         "all", "mean" , "none",2
+# "generic_cobalt","wc_vert_int_juptake_nh4","wc_vert_int_juptake_nh4",  "ocean_daily%4yr%2mo",         "all", "mean" , "none",2
+# "generic_cobalt","wc_vert_int_juptake_no3","wc_vert_int_juptake_no3",  "ocean_daily%4yr%2mo",         "all", "mean" , "none",2
  
 # -----------------------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------------------
 # OCEAN_MONTH, OCEAN_MONTH_Z: Monthly scalar and vector components
 # -----------------------------------------------------------------------------------------
-# "ocean_model_z", "volcello",     "volcello",         "ocean_month_z%4yr",       "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2 # Cell measure for 3d data
-# "ocean_model_z", "so",           "so",               "ocean_month_z%4yr",       "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z", "SSH",           "SSH",               "ocean_month_z%4yr",       "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z", "uo",           "uo",               "ocean_month_z%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z", "vo",           "vo",               "ocean_month_z%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- 
- "ocean_model", "volcello",     "volcello",         "ocean_month%4yr",       "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2 # Cell measure for 3d data
- "ocean_model", "so",           "so",               "ocean_month%4yr",       "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "SSH",           "SSH",               "ocean_month%4yr",       "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "uo",           "uo",               "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "vo",           "vo",               "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "umo",          "umo",              "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "vmo",          "vmo",              "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model", "MLD_003",      "MLD_003",          "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "generic_cobalt", "chl",      "chl",          "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "po4",      "po4",          "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "no3",      "no3",          "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "nh4",      "nh4",          "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "generic_cobalt", "co3_ion",      "co3_ion", "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "alk",      "alk",          "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
- "ocean_model", "dic",      "dic",          "ocean_month%4yr",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
+# "ocean_model", "volcello",     "volcello",         "ocean_month%4yr",       "all", "mean", "none",2 # Cell measure for 3d data
+# "ocean_model", "so",           "so",               "ocean_month%4yr",       "all", "mean", "none",2
+# "ocean_model", "SSH",           "SSH",               "ocean_month%4yr",       "all", "mean", "none",2
+# "ocean_model", "uo",           "uo",               "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "vo",           "vo",               "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "umo",          "umo",              "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "vmo",          "vmo",              "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "MLD_003",      "MLD_003",          "ocean_month%4yr",      "all", "mean", "none",2
+# "generic_cobalt", "chl",      "chl",          "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "po4",      "po4",          "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "no3",      "no3",          "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "nh4",      "nh4",          "ocean_month%4yr",      "all", "mean", "none",2
+# "generic_cobalt", "co3_ion",      "co3_ion", "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "alk",      "alk",          "ocean_month%4yr",      "all", "mean", "none",2
+# "ocean_model", "dic",      "dic",          "ocean_month%4yr",      "all", "mean", "none",2
+
 # -----------------------------------------------------------------------------------------
 # OCEAN_ANNUAL, OCEAN_ANNUAL_Z: Yearly scalar and vector components
 # -----------------------------------------------------------------------------------------
-# "ocean_model_z", "volcello",     "volcello",         "ocean_annual_z",      "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2 # Cell measure for 3d data
-# "ocean_model_z", "uo",           "uo",               "ocean_annual_z",     "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z", "umo",          "umo",              "ocean_annual_z",     "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z", "vo",           "vo",               "ocean_annual_z",     "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z", "vmo",          "vmo",              "ocean_annual_z",     "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z", "uhml",         "uhml",             "ocean_annual_z",     "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z", "vhml",         "vhml",             "ocean_annual_z",     "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z",  "T_adx",     "T_adx",         "ocean_annual_z",       "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
-# "ocean_model_z",  "T_ady",     "T_ady",         "ocean_annual_z",       "all", "mean", "-98.0  -50.0   5.2  31.0  -1  -1",2
+# "ocean_model_z", "volcello",     "volcello",         "ocean_annual_z",      "all", "mean", "none",2 # Cell measure for 3d data
+# "ocean_model_z", "uo",           "uo",               "ocean_annual_z",     "all", "mean", "none",2
+# "ocean_model_z", "umo",          "umo",              "ocean_annual_z",     "all", "mean", "none",2
+# "ocean_model_z", "vo",           "vo",               "ocean_annual_z",     "all", "mean", "none",2
+# "ocean_model_z", "vmo",          "vmo",              "ocean_annual_z",     "all", "mean", "none",2
+# "ocean_model_z", "uhml",         "uhml",             "ocean_annual_z",     "all", "mean", "none",2
+# "ocean_model_z", "vhml",         "vhml",             "ocean_annual_z",     "all", "mean", "none",2
+# "ocean_model_z",  "T_adx",     "T_adx",         "ocean_annual_z",       "all", "mean", "none",2
+# "ocean_model_z",  "T_ady",     "T_ady",         "ocean_annual_z",       "all", "mean", "none",2
  
-# "ocean_model",   "volcello",     "volcello",         "ocean_annual",  "all","mean","-98.0  -50.0   5.2  31.0  -1  -1",2 # Cell measure for 3d data
+# "ocean_model",   "volcello",     "volcello",         "ocean_annual",  "all","mean","none",2 # Cell measure for 3d data
 # -----------------------------------------------------------------------------------------
 

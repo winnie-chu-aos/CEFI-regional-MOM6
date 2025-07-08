@@ -171,7 +171,8 @@ ENSEMBLE_OCEAN = False          !   [Boolean] default = False
                                 ! statistical evaluation and/or data assimilation.
 HOMOGENIZE_FORCINGS = False     !   [Boolean] default = False
                                 ! If True, homogenize the forces and fluxes.
-
+                                !
+                                
 ! === module MOM_domains ===
 REENTRANT_X = False             !   [Boolean] default = True
                                 ! If true, the domain is zonally reentrant.
@@ -518,7 +519,7 @@ USE_RGC_TRACER = False          !   [Boolean] default = False
                                 ! If true, use the RGC_tracer tracer package.
 USE_IDEAL_AGE_TRACER = False    !   [Boolean] default = False
                                 ! If true, use the ideal_age_example tracer package.
-USE_REGIONAL_DYES = False       !   [Boolean] default = False
+USE_REGIONAL_DYES = True        !   [Boolean] default = False
                                 ! If true, use the regional_dyes tracer package.
 USE_OIL_TRACER = False          !   [Boolean] default = False
                                 ! If true, use the oil_tracer tracer package.
@@ -533,12 +534,32 @@ USE_generic_tracer = True       !   [Boolean] default = False
                                 ! MOM_generic_tracer packages.
 USE_PSEUDO_SALT_TRACER = False  !   [Boolean] default = False
                                 ! If true, use the pseudo salt tracer, typically run as a diagnostic.
-USE_BOUNDARY_IMPULSE_TRACER = False !   [Boolean] default = False
+USE_BOUNDARY_IMPULSE_TRACER = True !   [Boolean] default = False
                                 ! If true, use the boundary impulse tracer.
 USE_DYED_OBC_TRACER = False     !   [Boolean] default = False
                                 ! If true, use the dyed_obc_tracer tracer package.
 USE_NW2_TRACERS = False         !   [Boolean] default = False
                                 ! If true, use the NeverWorld2 tracers.
+
+! === module boundary_impulse_tracer ===
+IMPULSE_SOURCE_TIME = 15768000     ! [seconds] default = 31536000.0
+                                ! Length of time for the boundary tracer to be injected into the mixed layer. 
+                                ! After this time has elapsed, the surface becomes a sink for the boundary impulse tracer.
+
+! === module regional_dyes ===
+NUM_DYE_TRACERS = 7             ! Number of tracers to put in the simulation.
+                                ! Each tracer must have its own region.
+DYE_SOURCE_MINLON = -100,-100,-100,-100,-100,-100,-100         ! [deg E] This is the starting longitude at which we start injecting dyes.
+                                !
+DYE_SOURCE_MAXLON = -50,-50,-50,-50,-50,-50,-50         ! [deg E] This is the starting longitude at which we start injecting dyes.
+                                !
+DYE_SOURCE_MINLAT = 5,5,5,5,5,5,5          ! [deg N] This is the starting latitude at which we start injecting dyes.
+                                !
+DYE_SOURCE_MAXLAT = 32,32,32,32,32,32,32          ! [deg N] This is the starting latitude at which we start injecting dyes.
+                                !
+DYE_SOURCE_MINDEPTH = 50,100,200,400,800,1600,3200       ! [meters] This is the minimum depth at which we inject dyes.
+                                !
+DYE_SOURCE_MAXDEPTH = 55,115,220,475,900,1750,3400       ! [meters] This is the maximum depth at which we inject dyes.
 
 ! === module register_MOM_generic_tracer ===
 GENERIC_TRACER_IC_FILE = "bgc_woa_esper_ics_1993_2023-04.nc" ! default = ""
@@ -800,11 +821,11 @@ ODA_INCUPD = False              !   [Boolean] default = False
 SPONGE = False                  !   [Boolean] default = False
                                 ! If true, sponges may be applied anywhere in the domain. The exact location and
                                 ! properties of those sponges are specified via SPONGE_CONFIG.
-OBC_SEGMENT_001_DATA = "U=file:uv_001.nc(u),V=file:uv_001.nc(v),SSH=file:zos_001.nc(zos),TEMP=file:thetao_001.nc(thetao),SALT=file:so_001.nc(so),Uamp=file:tu_001.nc(uamp),Uphase=file:tu_001.nc(uphase),Vamp=file:tu_001.nc(vamp),Vphase=file:tu_001.nc(vphase),SSHamp=file:tz_001.nc(zamp),SSHphase=file:tz_001.nc(zphase)" !
+OBC_SEGMENT_001_DATA = "U=file:uv_001_1997.nc(u),V=file:uv_001_1997.nc(v),SSH=file:zos_001_1997.nc(zos),TEMP=file:thetao_001_1997.nc(thetao),SALT=file:so_001_1997.nc(so),Uamp=file:tu_001.nc(uamp),Uphase=file:tu_001.nc(uphase),Vamp=file:tu_001.nc(vamp),Vphase=file:tu_001.nc(vphase),SSHamp=file:tz_001.nc(zamp),SSHphase=file:tz_001.nc(zphase)" !
                                 ! OBC segment docs
-OBC_SEGMENT_002_DATA = "U=file:uv_002.nc(u),V=file:uv_002.nc(v),SSH=file:zos_002.nc(zos),TEMP=file:thetao_002.nc(thetao),SALT=file:so_002.nc(so),Uamp=file:tu_002.nc(uamp),Uphase=file:tu_002.nc(uphase),Vamp=file:tu_002.nc(vamp),Vphase=file:tu_002.nc(vphase),SSHamp=file:tz_002.nc(zamp),SSHphase=file:tz_002.nc(zphase)" !
+OBC_SEGMENT_002_DATA = "U=file:uv_002_1997.nc(u),V=file:uv_002_1997.nc(v),SSH=file:zos_002_1997.nc(zos),TEMP=file:thetao_002_1997.nc(thetao),SALT=file:so_002_1997.nc(so),Uamp=file:tu_002.nc(uamp),Uphase=file:tu_002.nc(uphase),Vamp=file:tu_002.nc(vamp),Vphase=file:tu_002.nc(vphase),SSHamp=file:tz_002.nc(zamp),SSHphase=file:tz_002.nc(zphase)" !
                                 ! OBC segment docs
-OBC_SEGMENT_003_DATA = "U=file:uv_003.nc(u),V=file:uv_003.nc(v),SSH=file:zos_003.nc(zos),TEMP=file:thetao_003.nc(thetao),SALT=file:so_003.nc(so),Uamp=file:tu_003.nc(uamp),Uphase=file:tu_003.nc(uphase),Vamp=file:tu_003.nc(vamp),Vphase=file:tu_003.nc(vphase),SSHamp=file:tz_003.nc(zamp),SSHphase=file:tz_003.nc(zphase)" !
+OBC_SEGMENT_003_DATA = "U=file:uv_003_1997.nc(u),V=file:uv_003_1997.nc(v),SSH=file:zos_003_1997.nc(zos),TEMP=file:thetao_003_1997.nc(thetao),SALT=file:so_003_1997.nc(so),Uamp=file:tu_003.nc(uamp),Uphase=file:tu_003.nc(uphase),Vamp=file:tu_003.nc(vamp),Vphase=file:tu_003.nc(vphase),SSHamp=file:tz_003.nc(zamp),SSHphase=file:tz_003.nc(zphase)" !
                                 ! OBC segment docs
 OBC_USER_CONFIG = "none"        ! default = "none"
                                 ! A string that sets how the user code is invoked to set open boundary data:

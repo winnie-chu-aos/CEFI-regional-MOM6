@@ -527,8 +527,10 @@
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/generic_CFC.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/cobalt_send_diag.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/cobalt_param_doc.F90
+/scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/cobalt_types_clean.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/generic_tracer_utils.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/generic_SF6.F90
+/scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/original/generic_COBALT.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/cobalt_types.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/generic_tracer.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/FMS_co2calc.F90
@@ -537,7 +539,6 @@
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/generic_age.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/cobalt_reg_diag.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/generic_argon.F90
-/scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/generic_tracers/generic_COBALT.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/mocsy/src/mocsy_p80.F90
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/mocsy/src/mocsy_DNADHeaders.h
 /scratch/gpfs/CDEUTSCH/wchu/CEFI-regional-MOM6/builds/../src/ocean_BGC/mocsy/src/mocsy_errors.F90

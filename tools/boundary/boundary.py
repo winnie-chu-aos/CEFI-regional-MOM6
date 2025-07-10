@@ -568,12 +568,12 @@ class Segment():
         # Rotate velocities to be model-relative.
         if rotate:
             if self.border in ['south', 'north']:
-                #udest = udest.rename({'nxp': 'locations'})
-                #vdest = vdest.rename({'nxp': 'locations'})
+                udest = udest.rename({'nxp': 'locations'})
+                vdest = vdest.rename({'nxp': 'locations'})
                 angle = self.coords['angle'].rename({'nxp': 'locations'})
             elif self.border in ['west', 'east']:
-                #udest = udest.rename({'nyp': 'locations'})
-                #vdest = vdest.rename({'nyp': 'locations'})
+                udest = udest.rename({'nyp': 'locations'})
+                vdest = vdest.rename({'nyp': 'locations'})
                 angle = self.coords['angle'].rename({'nyp': 'locations'})
             udest, vdest = rotate_uv(udest, vdest, angle)
 

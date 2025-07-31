@@ -26,7 +26,7 @@
 
  &coupler_nml
         months = 0
-        days   = 10
+        days   = 5
         current_date = 1993,1,1,0,0,0
         restart_interval = 0,1,0,0,0,0
         hours = 0
